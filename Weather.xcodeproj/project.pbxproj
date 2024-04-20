@@ -11,6 +11,10 @@
 		2A0779632BD3822E00F1BB4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0779622BD3822E00F1BB4E /* ContentView.swift */; };
 		2A0779652BD3822F00F1BB4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0779642BD3822F00F1BB4E /* Assets.xcassets */; };
 		2A0779682BD3822F00F1BB4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0779672BD3822F00F1BB4E /* Preview Assets.xcassets */; };
+		2A07796F2BD38B3E00F1BB4E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07796E2BD38B3E00F1BB4E /* AppConstants.swift */; };
+		2A0779722BD3B67800F1BB4E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0779712BD3B67800F1BB4E /* NetworkManager.swift */; };
+		2A0779742BD3B8B000F1BB4E /* CityWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0779732BD3B8B000F1BB4E /* CityWeatherResponse.swift */; };
+		2A0779772BD3EF1A00F1BB4E /* WAHeaderInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0779762BD3EF1A00F1BB4E /* WAHeaderInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		2A0779622BD3822E00F1BB4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A0779642BD3822F00F1BB4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A0779672BD3822F00F1BB4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2A07796E2BD38B3E00F1BB4E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		2A0779712BD3B67800F1BB4E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2A0779732BD3B8B000F1BB4E /* CityWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherResponse.swift; sourceTree = "<group>"; };
+		2A0779762BD3EF1A00F1BB4E /* WAHeaderInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAHeaderInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		2A07795F2BD3822E00F1BB4E /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				2A0779702BD3B60D00F1BB4E /* Networking */,
 				2A0779602BD3822E00F1BB4E /* WeatherApp.swift */,
 				2A0779622BD3822E00F1BB4E /* ContentView.swift */,
+				2A0779752BD3EEF400F1BB4E /* Views */,
+				2A07796E2BD38B3E00F1BB4E /* AppConstants.swift */,
 				2A0779642BD3822F00F1BB4E /* Assets.xcassets */,
 				2A0779662BD3822F00F1BB4E /* Preview Content */,
 			);
@@ -65,6 +76,23 @@
 				2A0779672BD3822F00F1BB4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2A0779702BD3B60D00F1BB4E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2A0779712BD3B67800F1BB4E /* NetworkManager.swift */,
+				2A0779732BD3B8B000F1BB4E /* CityWeatherResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2A0779752BD3EEF400F1BB4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A0779762BD3EF1A00F1BB4E /* WAHeaderInfoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0779722BD3B67800F1BB4E /* NetworkManager.swift in Sources */,
 				2A0779632BD3822E00F1BB4E /* ContentView.swift in Sources */,
+				2A07796F2BD38B3E00F1BB4E /* AppConstants.swift in Sources */,
 				2A0779612BD3822E00F1BB4E /* WeatherApp.swift in Sources */,
+				2A0779742BD3B8B000F1BB4E /* CityWeatherResponse.swift in Sources */,
+				2A0779772BD3EF1A00F1BB4E /* WAHeaderInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
